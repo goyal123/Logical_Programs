@@ -12,6 +12,7 @@
             Console.WriteLine("2 - Check Perfect Number");
             Console.WriteLine("3 - Check Perfect Number");
             Console.WriteLine("4 - Generate Reverse of Number");
+            Console.WriteLine("5 - Coupon check");
 
             options = Convert.ToInt32(Console.ReadLine());
             switch (options)
@@ -38,6 +39,12 @@
                     Console.WriteLine("Enter Number to reverse");
                     num = Convert.ToInt32(Console.ReadLine());
                     Reverse_Number.Reverse(num);
+                    break;
+
+                case 5:
+                    Console.WriteLine("Enter 2 digit Coupon Number");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    Coupon.coupongen(num);
                     break;
 
 
