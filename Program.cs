@@ -10,6 +10,7 @@
             Console.WriteLine("Choose Given options for respective Programs to Run");
             Console.WriteLine("1 - Generate Fibonaaci Series");
             Console.WriteLine("2 - Check Perfect Number");
+            Console.WriteLine("3 - Check Perfect Number");
             options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -24,6 +25,14 @@
                     num=Convert.ToInt32(Console.ReadLine());   
                     PerfectNumber.perfectnum(num);
                     break;
+
+                case 3:
+                    Console.WriteLine("Enter Number to check");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    PrimeNumber.primenum(num);
+                    break;
+
+
 
 
             }
