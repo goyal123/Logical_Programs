@@ -11,6 +11,8 @@
             Console.WriteLine("1 - Generate Fibonaaci Series");
             Console.WriteLine("2 - Check Perfect Number");
             Console.WriteLine("3 - Check Perfect Number");
+            Console.WriteLine("4 - Generate Reverse of Number");
+
             options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -31,6 +33,13 @@
                     num = Convert.ToInt32(Console.ReadLine());
                     PrimeNumber.primenum(num);
                     break;
+
+                case 4:
+                    Console.WriteLine("Enter Number to reverse");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    Reverse_Number.Reverse(num);
+                    break;
+
 
 
 
