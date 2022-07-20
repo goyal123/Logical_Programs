@@ -20,6 +20,7 @@ namespace Logical_Programs
             Console.WriteLine("7 - Find Day of week");
             Console.WriteLine("8 - Tempearature Conversion");
             Console.WriteLine("9 - EMI Calculator");
+            Console.WriteLine("10 - Find SquareRoot");
 
 
             Stopwatch watch = new Stopwatch();
@@ -123,6 +124,15 @@ namespace Logical_Programs
                     MonthlyPay.emical(principal, Rate, year);
                     watch.Stop();
                     break;
+
+                case 10:
+                    watch.Start();
+                    Console.WriteLine("Enter Number to compute Square Root");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    Sqrt.sqrtcal(num);
+                    watch.Stop();
+                    break;
+
             }
             
             Console.WriteLine("Elasped Time = "+watch.ElapsedMilliseconds);
