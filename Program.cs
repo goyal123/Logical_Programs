@@ -22,6 +22,7 @@ namespace Logical_Programs
             Console.WriteLine("9 - EMI Calculator");
             Console.WriteLine("10 - Find SquareRoot");
             Console.WriteLine("11 - Decimal to Binary Conversion");
+            Console.WriteLine("12 - Binary to Decimal Conversion using swapped nibbles");
 
             Stopwatch watch = new Stopwatch();
 
@@ -137,8 +138,17 @@ namespace Logical_Programs
                     watch.Start();
                     Console.WriteLine("Enter Number ");
                     num = Convert.ToInt32(Console.ReadLine());
-                    DecimaltoBinary.DectoBin(num);
+                    string binary = DecimaltoBinary.DectoBin(num);
+                    Console.WriteLine("Binary Equivaent = " + binary);
                     watch.Stop();
+                    break;
+
+                case 12:
+                    watch.Start();
+                    Console.WriteLine("Enter Number ");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    BinarytoDecimal obj = new BinarytoDecimal(num);
+                    Console.WriteLine("Decimal Representation after swapped nibbles = "+obj.BintoDec(obj.binary));
                     break;
             }
             
