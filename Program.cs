@@ -7,6 +7,7 @@ namespace Logical_Programs
         static void Main(string[] args)
         {
             int options,num,day,month,year;
+            double temp;
 
             Console.WriteLine("Welcome to Logical Programs");
             Console.WriteLine("Choose Given options for respective Programs to Run");
@@ -17,8 +18,7 @@ namespace Logical_Programs
             Console.WriteLine("5 - Coupon check");
             Console.WriteLine("6 - Vending Machine");
             Console.WriteLine("7 - Find Day of week");
-
-
+            Console.WriteLine("8 - Tempearature Conversion");
 
             Stopwatch watch = new Stopwatch();
 
@@ -88,6 +88,28 @@ namespace Logical_Programs
 
                     watch.Stop();
                     break;
+
+                case 8:
+                    watch.Start();
+                    Console.WriteLine("Enter one of the below options");
+                    Console.WriteLine(" 1 - Farenheit to Celcius Conversion ");
+                    Console.WriteLine(" 2 - Celcuis to Farenheit Conversion ");
+                    var ans = Convert.ToInt32(Console.ReadLine());
+                    if (ans==1)
+                    {
+                        Console.WriteLine("Enter the Temperature");
+                        temp = Convert.ToDouble(Console.ReadLine());
+                        TempConversion.temptocelcius(temp);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Enter the Temperature");
+                        temp = Convert.ToDouble(Console.ReadLine());
+                        TempConversion.temptoFaren(temp);
+                    }
+                    watch.Stop();
+                    break;
+
 
             }
             
