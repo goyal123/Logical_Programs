@@ -6,8 +6,8 @@ namespace Logical_Programs
     {
         static void Main(string[] args)
         {
-            int options,num,day,month,year;
-            double temp;
+            int options, num, day, month, year, principal;
+            double temp,Rate;
 
             Console.WriteLine("Welcome to Logical Programs");
             Console.WriteLine("Choose Given options for respective Programs to Run");
@@ -19,6 +19,8 @@ namespace Logical_Programs
             Console.WriteLine("6 - Vending Machine");
             Console.WriteLine("7 - Find Day of week");
             Console.WriteLine("8 - Tempearature Conversion");
+            Console.WriteLine("9 - EMI Calculator");
+
 
             Stopwatch watch = new Stopwatch();
 
@@ -110,7 +112,17 @@ namespace Logical_Programs
                     watch.Stop();
                     break;
 
-
+                case 9:
+                    watch.Start();
+                    Console.WriteLine("Enter the Principal Amount");
+                    principal = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("\nEnter the Rate of Interest");
+                    Rate = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter the Repayement Tenure");
+                    year = Convert.ToInt32(Console.ReadLine());
+                    MonthlyPay.emical(principal, Rate, year);
+                    watch.Stop();
+                    break;
             }
             
             Console.WriteLine("Elasped Time = "+watch.ElapsedMilliseconds);
