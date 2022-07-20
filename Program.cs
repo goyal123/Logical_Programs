@@ -6,7 +6,7 @@ namespace Logical_Programs
     {
         static void Main(string[] args)
         {
-            int options,num;
+            int options,num,day,month,year;
 
             Console.WriteLine("Welcome to Logical Programs");
             Console.WriteLine("Choose Given options for respective Programs to Run");
@@ -16,6 +16,8 @@ namespace Logical_Programs
             Console.WriteLine("4 - Generate Reverse of Number");
             Console.WriteLine("5 - Coupon check");
             Console.WriteLine("6 - Vending Machine");
+            Console.WriteLine("7 - Find Day of week");
+
 
 
             Stopwatch watch = new Stopwatch();
@@ -69,6 +71,21 @@ namespace Logical_Programs
                     Console.WriteLine("Enter the amount");
                     num = Convert.ToInt32(Console.ReadLine());
                     VendingMachine.machine(num);
+                    watch.Stop();
+                    break;
+
+                case 7:
+                    watch.Start();
+                    Console.WriteLine("Enter the date");
+                    var date = Console.ReadLine();
+                    var new_date = date.Split(',');
+
+                    day = Convert.ToInt32(new_date[0]);
+                    month = Convert.ToInt32(new_date[1]);
+                    year = Convert.ToInt32(new_date[2]);
+
+                    dayofweek.findday(day, month, year);
+
                     watch.Stop();
                     break;
 
