@@ -15,6 +15,8 @@ namespace Logical_Programs
             Console.WriteLine("3 - Check Perfect Number");
             Console.WriteLine("4 - Generate Reverse of Number");
             Console.WriteLine("5 - Coupon check");
+            Console.WriteLine("6 - Vending Machine");
+
 
             Stopwatch watch = new Stopwatch();
 
@@ -62,9 +64,17 @@ namespace Logical_Programs
                     watch.Stop();
                     break;
 
+                case 6:
+                    watch.Start();
+                    Console.WriteLine("Enter the amount");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    VendingMachine.machine(num);
+                    watch.Stop();
+                    break;
+
             }
             
-            Console.WriteLine(watch.ElapsedMilliseconds);
+            Console.WriteLine("Elasped Time = "+watch.ElapsedMilliseconds);
         }
     }
 }
