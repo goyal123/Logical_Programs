@@ -21,7 +21,7 @@ namespace Logical_Programs
             Console.WriteLine("8 - Tempearature Conversion");
             Console.WriteLine("9 - EMI Calculator");
             Console.WriteLine("10 - Find SquareRoot");
-
+            Console.WriteLine("11 - Decimal to Binary Conversion");
 
             Stopwatch watch = new Stopwatch();
 
@@ -133,6 +133,13 @@ namespace Logical_Programs
                     watch.Stop();
                     break;
 
+                case 11:
+                    watch.Start();
+                    Console.WriteLine("Enter Number ");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    DecimaltoBinary.DectoBin(num);
+                    watch.Stop();
+                    break;
             }
             
             Console.WriteLine("Elasped Time = "+watch.ElapsedMilliseconds);
